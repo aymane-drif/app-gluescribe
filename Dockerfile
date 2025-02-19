@@ -1,5 +1,5 @@
 # Stage 1: Build the Nuxt app
-FROM node:16-alpine AS builder
+FROM node:20-alpine AS builder
 WORKDIR /app
 # Copy package files and install dependencies
 COPY package*.json ./
@@ -9,7 +9,7 @@ COPY . .
 RUN npm run build
 
 # Stage 2: Production image
-FROM node:16-alpine
+FROM node:20-alpine
 WORKDIR /app
 # Copy the built app from the builder stage
 COPY --from=builder /app .
