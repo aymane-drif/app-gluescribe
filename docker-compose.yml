@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  nuxt-app:
+    build: .
+    container_name: nuxt-app
+    ports:
+      - "5173:3000"  # Mapping container port 3000 to host port 3000
+    environment:
+      NODE_ENV: production
+    restart: always
