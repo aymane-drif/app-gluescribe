@@ -16,4 +16,4 @@ COPY --from=builder /app .
 # Expose the port Nuxt will run on
 EXPOSE 5173
 # Start the Nuxt application
-CMD ["npm", "start"]
+CMD ["node", ".output/server/index.mjs"]
