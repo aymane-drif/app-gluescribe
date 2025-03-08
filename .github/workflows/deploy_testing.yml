@@ -24,7 +24,7 @@ jobs:
             DEPLOY_DIR="/home/deploy/nuxt-app"
             # If the deployment directory doesn't exist, clone the repo
             if [ ! -d "$DEPLOY_DIR" ]; then
-              git clone https://github.com/<your-username>/<your-repo>.git "$DEPLOY_DIR"
+              git clone https://github.com/aymane-drif/app-gluescribe.git "$DEPLOY_DIR"
             fi
             cd "$DEPLOY_DIR"
             git fetch origin
