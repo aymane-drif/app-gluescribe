@@ -1,17 +1,45 @@
 {
-  "name": "nuxt-app",
+  "name": "app-gluescribe",
   "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.x"
+  },
   "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "format": "prettier --write src/",
     "generate": "nuxt generate",
+    "lint": "eslint . --ext .vue,.js,.jsx --fix --ignore-path .gitignore",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "reset": "rm -rf .nuxt node_modules .output package-lock.json && npm install"
   },
   "dependencies": {
-    "nuxt": "^3.15.4",
-    "vue": "latest",
-    "vue-router": "latest"
+    "@pinia/nuxt": "^0.5.4",
+    "@vueuse/core": "^11.0.3",
+    "@vueuse/nuxt": "^11.0.3",
+    "apexcharts": "^4.5.0",
+    "dropzone-vue": "^0.1.11",
+    "vue-code-highlighter": "^1.1.2",
+    "vue3-apexcharts": "^1.8.0",
+    "sass": "^1.85.1",
+    "sass-loader": "^16.0.5",
+    "vite-plugin-vuetify": "^2.1.0",
+    "vuetify": "^3.7.14"
+  },
+  "devDependencies": {
+    "@iconify/vue": "^4.1.2",
+    "@tabler/icons": "^3.2.0",
+    "@vite-pwa/nuxt": "^0.10.5",
+    "netlify-cli": "^17.36.0",
+    "pinia": "^2.2.2",
+    "sass": "1.77.6",
+    "@mdi/font": "^7.4.47",
+    "date-fns": "^2.29.3",
+    "maska": "^1.5.0",
+    "vuetify": "3.7.1",
+    "nuxt": "^3.15.4"
   }
 }
