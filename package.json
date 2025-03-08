@@ -2,6 +2,7 @@
   "name": "app-gluescribe",
   "private": true,
   "license": "MIT",
+  "version": "1.0.1",
   "engines": {
     "node": ">=18.x"
   },
