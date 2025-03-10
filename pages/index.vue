@@ -4,6 +4,11 @@ import TasksPerformance from "@/components/dashboard/project/TasksPerformance.vu
 import ActiveProjects from "@/components/dashboard/project/ActiveProjects.vue";
 import MyTask from "@/components/dashboard/project/MyTask.vue";
 import Teams from "@/components/dashboard/project/Teams.vue";
+
+definePageMeta({
+  middleware: 'auth'
+})
+
 const route = useRoute();
 
 const layoutClassic = route.path.includes("horizontal");

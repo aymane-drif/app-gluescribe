@@ -1,6 +1,8 @@
 <script setup>
 import Settings from "@/components/apps/profile/Settings.vue";
-
+definePageMeta({
+  middleware: 'auth'
+})
 useSeoMeta({
   title: "Settings",
   ogTitle: "Setting",

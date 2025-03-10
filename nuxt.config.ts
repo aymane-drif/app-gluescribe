@@ -17,7 +17,15 @@ export default defineNuxtConfig({
       new URL("./assets/styles/_variables.scss", import.meta.url)
     ),
   },
-
+  runtimeConfig: {
+    // Private keys that are exposed only to the server
+    
+    // Public keys that are exposed to the client
+    public: {
+      supabaseUrl: import.meta.env.SUPABASE_URL || process.env.SUPABASE_URL,
+      supabaseKey: import.meta.env.SUPABASE_KEY || process.env.SUPABASE_KEY,
+    }
+  },
   app: {
     baseURL: "/",
     head: {
@@ -107,6 +115,11 @@ export default defineNuxtConfig({
   ],
 
   devtools: { enabled: true },
+
+  plugins: [
+    '~/plugins/supabase.js',
+    '~/plugins/supabase-auth.js'
+  ],
 
   modules: [
     "@pinia/nuxt",

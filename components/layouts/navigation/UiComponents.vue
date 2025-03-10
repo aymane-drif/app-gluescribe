@@ -75,10 +75,10 @@ const componentList = [
     title: "Expansion Panel",
     to: "expansion-panel",
   },
-  // {
-  //   title: 'Form Wizard',
-  //   to: 'form-wizard'
-  // },
+  {
+    title: 'Form Wizard',
+    to: 'form-wizard'
+  },
   {
     title: "Footer",
     to: "footer",
