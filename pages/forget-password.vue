@@ -3,6 +3,7 @@ import ForgetPassword from "@/components/layouts-pages/authentications/ForgetPas
 
 definePageMeta({
   layout: "blank",
+  middleware: 'public'
 });
 
 useSeoMeta({

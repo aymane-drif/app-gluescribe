@@ -1,6 +1,12 @@
 <script setup>
 import avatar1 from "/images/avatar/avatar-1.jpg";
+const { loading, error, handleSignout } = useSignout()
 
+// Example usage with a button or other UI element
+const onSignoutClick = () => {
+  // Optionally specify a custom redirect path
+  handleSignout('/sign-in')
+}
 const itemList = [
   {
     name: "Edit Profile",
@@ -21,6 +27,9 @@ const itemList = [
     name: "Sign Out",
     icon: "tabler-power",
     value: "sign-out",
+    handler:()=>{
+      onSignoutClick();
+    }
   },
 ];
 </script>
@@ -42,13 +51,13 @@ const itemList = [
         </v-avatar>
       </v-badge>
     </template>
-    <v-list>
+    <v-list :loading="loading" >
       <div class="px-4 pt-2">
         <h5 class="text-h5">John E. Grainger</h5>
         <NuxtLink class="text-body-2" to="/">View my profile</NuxtLink>
         <v-divider class="my-2" />
       </div>
-      <v-list-item v-for="item in itemList" :key="item.value" :value="item.value">
+      <v-list-item v-for="item in itemList" :key="item.value" :value="item.value" @click="item.handler" :loading="loading">
         <template #prepend>
           <v-icon :icon="item.icon" size="small" />
         </template>

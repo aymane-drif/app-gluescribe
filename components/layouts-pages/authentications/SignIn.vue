@@ -1,10 +1,8 @@
 <script setup>
 const { requiredValidator } = useValidators();
-
+const { email, password, error, loading, handleLogin } = useLogin();
 const refVForm = ref();
 const isPasswordVisible = ref(false);
-const email = ref("");
-const password = ref("");
 const rememberMe = ref(false);
 
 const errors = ref({
@@ -14,7 +12,9 @@ const errors = ref({
 
 const onSubmit = () => {
   refVForm.value?.validate().then(({ valid: isValid }) => {
-    if (isValid) alert("Welcome");
+    if (isValid){
+      handleLogin();
+    }
   });
 };
 </script>

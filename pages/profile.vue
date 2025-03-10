@@ -1,7 +1,9 @@
 <script setup>
 import UserProfile from "@/components/apps/profile/UserProfile.vue";
 import OverView from "@/components/apps/profile/Overviews.vue";
-
+definePageMeta({
+  middleware: 'auth'
+})
 useSeoMeta({
   title: "Profile",
   ogTitle: "Profile",

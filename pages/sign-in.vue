@@ -3,7 +3,10 @@ import SignIn from "@/components/layouts-pages/authentications/SignIn.vue";
 
 definePageMeta({
   layout: "blank",
+  middleware: 'public'
 });
+
+
 
 useSeoMeta({
   title: "Sign In",

@@ -3,6 +3,7 @@ import SignUp from "@/components/layouts-pages/authentications/SignUp.vue";
 
 definePageMeta({
   layout: "blank",
+  middleware: 'public'
 });
 
 useSeoMeta({
